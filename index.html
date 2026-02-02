@@ -91,32 +91,28 @@
       0 0 35px #ff4f8b;
   }
 
-  .scrollWrap{
-    height:260px;
-    overflow:hidden;
-    margin-top:30px;
-    mask-image:linear-gradient(
-      transparent,
-      white 15%,
-      white 85%,
-      transparent
-    );
-  }
+  .scrollWrap {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
 
-  .scrolling-text {
+.scroll {
   position: absolute;
   bottom: -100%;
   width: 100%;
-  animation: scrollUp 180s linear forwards;
-  padding-bottom: 100vh;
   line-height: 1.8;
+  padding-bottom: 120vh;
+
+  animation: scrollUp 130s forwards;
+  animation-timing-function: ease-in-out;
 }
   @keyframes scrollUp {
   from {
     transform: translateY(100%);
   }
   to {
-    transform: translateY(-200%);
+    transform: translateY(-220%);
   }
 }
 
@@ -280,6 +276,7 @@
 
 </body>
 </html>
+
 
 
 
