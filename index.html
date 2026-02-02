@@ -91,27 +91,26 @@
       0 0 35px #ff4f8b;
   }
 
-  .scrollWrap {
-  position: relative;
+ .scrollWrap {
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden;   
+  position: relative;
 }
 
 .scroll {
   position: absolute;
-  top: 100%;
+  bottom: -100%;      
   width: 100%;
   line-height: 1.8;
-  padding-bottom: 120vh;
 
-  animation: scrollUp 130s linear forwards;
+  animation: scrollUp 140s linear forwards; 
 }
  @keyframes scrollUp {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-220%);
+    transform: translateY(-300%); 
   }
 }
 
@@ -275,6 +274,7 @@
 
 </body>
 </html>
+
 
 
 
