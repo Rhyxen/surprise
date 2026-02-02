@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Valentine</title>
+
+<style>
+  *{box-sizing:border-box;font-family:Georgia,serif}
+  body{
+    margin:0;
+    min-height:100vh;
+    color:#fff;
+    text-align:center;
+    background:radial-gradient(circle at top,#3a0f1a,#120308);
+    overflow-x:hidden;
+  }
+  .wrap{
+    max-width:900px;
+    margin:auto;
+    padding:80px 20px 140px;
+  }
+
+  h1{
+    font-size:clamp(2.2rem,5vw,3.5rem);
+    margin-bottom:25px;
+    color:#ffd1dc;
+    text-shadow:0 0 20px rgba(255,105,180,.6);
+    transition:.4s ease;
+  }
+
+  /* Cute GIF (start only) */
+  .cute-gif{
+    width:160px;
+    max-width:60%;
+    margin:20px auto 30px;
+    display:block;
+    filter:drop-shadow(0 0 15px rgba(255,120,160,.6));
+    animation:floatGif 3s ease-in-out infinite;
+  }
+  @keyframes floatGif{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0)}
+  }
+
+  .btn{
+    padding:16px 42px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    font-size:1.2rem;
+    margin:10px;
+    transition:.2s ease;
+  }
+
+  .yes{
+    background:linear-gradient(135deg,#ff4f8b,#ff7aa2);
+    color:#fff;
+    box-shadow:0 0 25px rgba(255,79,139,.7);
+    animation:pulse 2s infinite;
+  }
+
+  .no{
+    background:#2a0c14;
+    color:#ffd1dc;
+    position:relative;
+  }
+
+  @keyframes pulse{
+    0%{box-shadow:0 0 18px rgba(255,79,139,.6)}
+    50%{box-shadow:0 0 35px rgba(255,79,139,.95)}
+    100%{box-shadow:0 0 18px rgba(255,79,139,.6)}
+  }
+
+  .stage{margin-top:40px}
+  .hidden{display:none}
+
+  .glowPink{
+    color:#ff8fb1;
+    text-shadow:0 0 22px rgba(255,143,177,.9);
+    font-size:1.25rem;
+  }
+
+  .flame{
+    color:#fff;
+    font-size:1.15rem;
+    text-shadow:
+      0 0 10px #ffd1dc,
+      0 0 20px #ff8fb1,
+      0 0 35px #ff4f8b;
+  }
+
+  .scrollWrap{
+    height:260px;
+    overflow:hidden;
+    margin-top:30px;
+    mask-image:linear-gradient(
+      transparent,
+      white 15%,
+      white 85%,
+      transparent
+    );
+  }
+
+  .scroll{
+    position:relative;
+    animation:scrollUp 35s linear infinite;
+    line-height:2;
+    color:#ffe6ee;
+  }
+
+  @keyframes scrollUp{
+    from{top:100%}
+    to{top:-120%}
+  }
+
+  footer{
+    position:fixed;
+    bottom:14px;
+    width:100%;
+    font-size:.85rem;
+    opacity:.7;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <h1 id="titleText">Riya, Will You Be My Valentine?</h1>
+
+  <!-- Cute GIF (only at start) -->
+  <img
+    src="https://i.pinimg.com/originals/1e/31/32/1e31323bae63dd3b0224b75bac7d58a5.gif"
+    alt="cute love gif"
+    class="cute-gif"
+    id="cuteGif"
+  />
+
+  <!-- Stage 1 -->
+  <div id="stage1" class="stage">
+    <button class="btn yes" onclick="yes()">YES ❤️</button>
+    <button class="btn no" id="noBtn">NO</button>
+  </div>
+
+  <!-- Stage 2 -->
+  <div id="stage2" class="stage hidden">
+    <p class="glowPink">
+      I believe love doesn’t live in what we say—it lives in what we do,
+      especially when no one is watching.
+    </p>
+
+    <p class="flame" style="margin-top:18px">
+      Do you want to know what I’m about to do—because this is me choosing you.
+    </p>
+
+    <button class="btn yes" id="tellBtn">Please tell me 🩷</button>
+  </div>
+
+  <!-- Stage 3 -->
+  <div id="stage3" class="stage hidden">
+    <h2 class="glowPink">I will love you the way you love  it .</h2>
+    <p style="opacity:.85;margin-top:6px">
+      💖💖💖.
+    </p>
+
+    <div class="scrollWrap">
+      <div class="scroll">
+        <p> my tongue owns every slick inch of you</p>
+        <p>I start slow at the base of your throat,</p>
+        <p>feel your pulse jump like it’s begging already,</p>
+        <p>then drag down—long, wet stripes</p>
+        <p>tasting the shiver that races ahead of me</p>
+        <p></p>
+        <p>no rush.</p>
+        <p>I let it roam lost on your breasts,</p>
+        <p>circle those hard little peaks with lazy flicks,</p>
+        <P>suck until they’re throbbing and you’re arching up,</P>
+        <p>offering more like you can’t help it.</p>
+        <p></p>
+        <p>lower.</p>
+        <p>I tongue-dive into your navel,</p>
+        <P>lap up the tiny salty pool that forms when your belly trembles. </P>
+        <p>Then I reach that sweet, dripping line at your waist</p>
+        <p>lick the border where sweet meets salt,</p>
+        <p>wrestle it with slow, greedy strokes</p>
+        <p>until you’re leaking for me, thighs already slick.</p>
+        <P>Roll over, baby.</P>
+        <p></p>
+        <p>Or let me flip you.</p>
+        <p>I worship those two perfect, soft moons</p>
+        <p>kissing, biting softly, spreading them wide</p> 
+        <p>so my tongue can slide deep into that warm shadowed split,</p>
+        <p>long hungry walks that make your hips buck without asking.</p>
+        <p></p>
+        <p>Now spread wider for me</p> 
+        <p>I find your wet pussy—God, so fucking soaked already</p>
+        <p>glistening, swollen, pulsing like it’s been waiting all day</p>
+        <p>My tongue slips inside that hot, slippery cave,</p>
+        <p>curls deep, circles the walls that flutter and grip,</p> 
+        <p>then flicks up to that needy little clit</p>
+        <p>slow at first, then faster, relentless</p>
+        <p>lapping every drop you give me, drinking you down</p>
+        <p>I wriggle deeper. Waggle. Suck.</p> 
+        <p>Flick that swollen pearl until your whole body jolts,</p>
+        <p>until your thighs clamp my head like a vice,</p>
+        <p>until you’re gasping, cursing, shaking</p>
+        <p>drenching my mouth, my chin, my everything.</p> 
+        <p>I don’t stop when you come.</p>
+        <p>I keep going softer, slower,</p>
+        <p>teasing out every last tremor,</p>
+        <p>milking those aftershocks until you’re boneless,</p>
+        <p>breathless, ruined in the best way</p>
+        <p>pussy still twitching, still dripping, still begging.</p>
+        <p></p>
+        <p>won’t stop when you come.</p>
+        <p>I’ll keep going softer, slower,</p>
+        <p>drawing out the aftershocks</p>
+        <p>until you’re boneless, breathless,</p>
+        <p>begging me to do it all again tomorrow</p>
+        <p>and the day after</p>
+        <p>and every night you let me near you.</p>
+        <p></p>
+        <p>Because this mouth?</p>
+        <p>It was made to worship you exactly like this.</p>
+        <p>And I’m nowhere near finished.</p>
+       </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  you are mine and im super possessive about that❣️.”
+</footer>
+
+<script>
+  // NO button runs away
+  const noBtn = document.getElementById('noBtn');
+  noBtn.addEventListener('mouseenter', ()=>{
+    const x = Math.random()*200 - 100;
+    const y = Math.random()*120 - 60;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  // YES action
+  function yes(){
+    const title = document.getElementById('titleText');
+    title.textContent = "I knew it — you would say YES ";
+    title.style.textShadow = "0 0 30px rgba(255,105,180,0.95)";
+
+    // hide GIF after YES
+    document.getElementById('cuteGif').style.display = "none";
+
+    document.getElementById('stage1').classList.add('hidden');
+    document.getElementById('stage2').classList.remove('hidden');
+  }
+
+  // “Please tell me” button dodges 3 times
+  const tellBtn = document.getElementById('tellBtn');
+  let hops = 0;
+  tellBtn.addEventListener('click', ()=>{
+    if(hops < 3){
+      hops++;
+      tellBtn.style.transform =
+        `translate(${Math.random()*160-80}px, ${Math.random()*120-60}px)`;
+    }else{
+      document.getElementById('stage2').classList.add('hidden');
+      document.getElementById('stage3').classList.remove('hidden');
+    }
+  });
+</script>
+
+</body>
+</html>
