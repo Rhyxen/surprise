@@ -91,29 +91,29 @@
       0 0 35px #ff4f8b;
   }
 
- .scrollWrap {
-  height: 100vh;
-  overflow: hidden;   
-  position: relative;
-}
-
-.scroll {
-  position:relative;
-  bottom: -120%;      
-  width: 100%;
-  line-height: 1.8;
- will-change: transform;
-
-  animation:scrollUp 35s linear infinite; 
-}
- @keyframes scrollUp {
-  from {
-    transform: translateY(0);
+  .scrollWrap{
+    height:260px;
+    overflow:hidden;
+    margin-top:30px;
+    mask-image:linear-gradient(
+      transparent,
+      white 15%,
+      white 85%,
+      transparent
+    );
   }
-  to {
-    transform: translateY(-300%); 
+
+  .scroll{
+    position:relative;
+    animation:scrollUp 35s linear infinite;
+    line-height:2;
+    color:#ffe6ee;
   }
-}
+
+  @keyframes scrollUp{
+    from{top:100%}
+    to{top:-120%}
+  }
 
   footer{
     position:fixed;
@@ -275,6 +275,7 @@
 
 </body>
 </html>
+
 
 
 
