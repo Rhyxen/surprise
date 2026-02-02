@@ -103,17 +103,23 @@
     );
   }
 
-  .scroll{
-    position:relative;
-    animation:scrollUp 35s linear infinite;
-    line-height:2;
-    color:#ffe6ee;
-  }
+ .scrollWrap:hover .scroll {
+  animation-play-state: paused;
+}
 
-  @keyframes scrollUp{
-    from{top:100%}
-    to{top:-120%}
-  }
+  .scroll {
+  position: relative;
+  animation: scrollUp 45s linear infinite; 
+  line-height: 2;
+  color: #ffe6ee;
+  display: inline-block; 
+  width: 100%;
+}
+
+  @keyframes scrollUp {
+  from { transform: translateY(100%); } 
+  to { transform: translateY(-100%); }   
+}
 
   footer{
     position:fixed;
@@ -275,6 +281,7 @@
 
 </body>
 </html>
+
 
 
 
