@@ -99,17 +99,16 @@
 
 .scroll {
   position: absolute;
-  bottom: -100%;
+  top: 100%;
   width: 100%;
   line-height: 1.8;
   padding-bottom: 120vh;
 
-  animation: scrollUp 130s forwards;
-  animation-timing-function: ease-in-out;
+  animation: scrollUp 130s linear forwards;
 }
-  @keyframes scrollUp {
+ @keyframes scrollUp {
   from {
-    transform: translateY(100%);
+    transform: translateY(0);
   }
   to {
     transform: translateY(-220%);
@@ -276,6 +275,7 @@
 
 </body>
 </html>
+
 
 
 
