@@ -103,17 +103,25 @@
     );
   }
 
-  .scroll{
-    position:relative;
-    animation:scrollUp 35s linear infinite;
-    line-height:2;
-    color:#ffe6ee;
-  }
+  .scrolling-text {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  line-height: 1.8;
+  padding-bottom: 120vh;
 
-  @keyframes scrollUp{
-    from{top:100%}
-    to{top:-120%}
+  animation: scrollUp 130s linear forwards;
+  animation-timing-function: ease-in-out;
+}
+
+  @keyframes scrollUp {
+  from {
+    transform: translateY(100%);
   }
+  to {
+    transform: translateY(-220%);
+  }
+}
 
   footer{
     position:fixed;
@@ -275,3 +283,4 @@
 
 </body>
 </html>
+
