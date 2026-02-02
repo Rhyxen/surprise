@@ -109,16 +109,26 @@
 
   .scroll {
   position: relative;
-  animation: scrollUp 35s linear 3.2s infinite;
+  
+  animation: scrollUp 35s linear 3s infinite; 
   line-height: 2;
   color: #ffe6ee;
-  display: inline-block; 
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  
+  transform: translateY(260px); 
 }
 
-  @keyframes scrollUp {
-  from { transform: translateY(100%); } 
-  to { transform: translateY(-100%); }   
+@keyframes scrollUp {
+  0% { 
+    
+    transform: translateY(260px); 
+  }
+  100% { 
+    
+    transform: translateY(-100%); 
+  }
 }
 
   footer{
@@ -281,6 +291,7 @@
 
 </body>
 </html>
+
 
 
 
